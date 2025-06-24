@@ -14,7 +14,11 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://suppliers-frontend-coral.vercel.app',
+    'https://suppliers-frontend-coral.vercel.app/'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   credentials: true,
